@@ -2,18 +2,16 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 
 from dotenv import load_dotenv
-load_dotenv('/home/mouad_elkhoumri/football-analytics/.env')
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 from api_client import get_fixtures, get_standings, get_top_scorers
 from gcs_uploader import upload_json_to_gcs
 from datetime import datetime
 
 LEAGUES = {
-    "ligue1": 61,
-    "premier_league": 39,
-    "champions_league": 2
+    "ligue1": 61
 }
-SEASON = 2023
+SEASON = 2024
 
 def run():
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
