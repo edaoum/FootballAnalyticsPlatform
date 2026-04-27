@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_fixtures
+    description: "Matchs nettoyés et typés depuis l'API Football"
+    columns:
+      - name: fixture_id
+        description: "Identifiant unique du match"
+        tests:
+          - unique
+          - not_null
+      - name: match_status
+        tests:
+          - not_null
+      - name: league_id
+        tests:
+          - not_null
+      - name: home_team_id
+        tests:
+          - not_null
+      - name: away_team_id
+        tests:
+          - not_null
+
+  - name: stg_standings
+    description: "Classements par ligue et saison"
+    columns:
+      - name: team_id
+        tests:
+          - not_null
+      - name: league_id
+        tests:
+          - not_null
+      - name: points
+        tests:
+          - not_null
+
+  - name: stg_players
+    description: "Stats joueurs (top scorers) par ligue"
+    columns:
+      - name: player_id
+        tests:
+          - not_null
+      - name: goals
+        tests:
+          - not_null

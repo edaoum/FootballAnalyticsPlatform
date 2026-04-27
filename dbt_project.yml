@@ -1,0 +1,27 @@
+name: 'dbt_football'
+version: '1.0.0'
+config-version: 2
+
+profile: 'dbt_football'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+analysis-paths: ["analyses"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  dbt_football:
+    staging:
+      +materialized: view
+      +schema: STAGING
+    intermediate:
+      +materialized: view
+      +schema: INTERMEDIATE
+    marts:
+      +materialized: table
+      +schema: MARTS
