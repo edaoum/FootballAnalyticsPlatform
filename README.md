@@ -43,7 +43,7 @@ API-Football → GCS → Snowflake (RAW) → dbt Cloud (Staging + Marts) → Pow
 
 - **League** : Ligue 1
 - **Season** : 2024/2025
-- **Volume** : ~380 fixtures, 20 top scorers, 1 standing
+- **Volume** : ~307 fixtures, 20 top scorers, 1 standing
 
 ## Setup
 
