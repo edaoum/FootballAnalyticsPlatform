@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    database: FOOTBALL_DB
+    schema: RAW
+    description: "Données brutes JSON chargées depuis GCS"
+    tables:
+      - name: raw_fixtures
+        description: "Matchs bruts depuis API-Football"
+        columns:
+          - name: raw_data
+            description: "JSON complet d'un appel API fixtures"
+          - name: loaded_at
+            description: "Timestamp de chargement"
+      - name: raw_standings
+        description: "Classements bruts par ligue"
+      - name: raw_players
+        description: "Stats joueurs brutes (top scorers)"
