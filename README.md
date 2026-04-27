@@ -41,9 +41,9 @@ API-Football → GCS → Snowflake (RAW) → dbt Cloud (Staging + Marts) → Pow
 
 ## Data
 
-- **Leagues** : Ligue 1, Premier League, Champions League
-- **Season** : 2023/2024
-- **Volume** : ~900 fixtures, 60 players, 3 standings
+- **League** : Ligue 1
+- **Season** : 2024/2025
+- **Volume** : ~380 fixtures, 20 top scorers, 1 standing
 
 ## Setup
 
